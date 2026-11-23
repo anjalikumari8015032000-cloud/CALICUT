@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.json"><title>CALICUT</title><link rel="stylesheet" href="css/style.css"></head><body>
+<canvas id="g"></canvas>
+<div id="hud" class="h"><div id="hpw"><div id="hp"></div></div><div id="obj"></div><div id="loc"></div><canvas id="mm" width="116" height="116"></canvas><div id="spd"></div><div id="msg" class="h"></div><div id="hint" class="h"></div></div>
+<div id="tc" class="h">
+<div id="jl"><div id="jk"></div></div>
+<div class="a" data-k="p" style="right:20px;bottom:90px">PUNCH</div>
+<div class="a" data-k="k" style="right:84px;bottom:50px">KICK</div>
+<div class="a" data-k="j" style="right:20px;bottom:24px;display:none"></div>
+<div class="a" data-k="j" style="right:148px;bottom:24px">JUMP</div>
+<div class="a" data-k="u" style="right:84px;bottom:120px">USE</div>
+<div class="a" data-k="r" style="right:148px;bottom:90px">RUN</div>
+<div class="a" data-k="b" style="right:212px;bottom:50px">BLOCK</div>
+<div class="a" data-k="d" style="right:212px;bottom:116px">DODGE</div>
+<div class="a" data-k="w" style="right:20px;bottom:160px;width:46px;height:46px">WPN</div>
+<div class="a" data-k="c" style="right:276px;bottom:24px;width:46px;height:46px">CAM</div>
+<div class="a" data-k="x" style="left:50%;top:6px;width:40px;height:40px;transform:translateX(-50%)">II</div>
+</div>
+<div id="menu" class="ov"><h1>CALICUT</h1><div style="opacity:.8;margin-bottom:10px">Maner - Goraiya Sthan - Danapur - Shadipur - Bayapur</div>
+<div class="b" id="bs">Start Game</div><div class="b" id="bc">Continue</div><div class="b" id="bm">Missions</div><div class="b" id="bt">Settings</div><div class="b" id="be">Exit</div></div>
+<div id="pause" class="ov t h"><h2>PAUSED</h2><div class="b" id="pr">Resume</div><div class="b" id="pq">Restart Mission</div><div class="b" id="pt">Settings</div><div class="b" id="pm">Main Menu</div></div>
+<div id="set" class="ov t h"><h2>SETTINGS</h2>
+<div class="s">Graphics <select id="sq"><option value="low">Low</option><option value="med">Medium</option><option value="high">High</option></select></div>
+<div class="s">Sound <input type="range" id="ssv" min="0" max="1" step=".05"></div>
+<div class="s">Music <input type="range" id="smv" min="0" max="1" step=".05"></div>
+<div class="s">Control <input type="range" id="sks" min=".5" max="2" step=".1"></div>
+<div class="s">Camera <input type="range" id="scs" min=".4" max="2.5" step=".1"></div>
+<div class="b" id="sb">Back</div></div>
+<div id="mis" class="ov t h"><h2>MISSIONS</h2><div class="ml" id="ml"></div><div class="b" id="mb">Back</div></div>
+<div id="pop" class="ov t h"><h2 id="pt1"></h2><div id="pt2"></div><div class="b" id="pb">Continue</div></div>
+<script>
+// Loads local lib/three.min.js first, falls back to CDN, then starts js/game.js
+function ld(u,ok,bad){var s=document.createElement('script');s.src=u;s.onload=ok;s.onerror=bad;document.body.appendChild(s)}
+function go(){ld('js/game.js')}
+ld('lib/three.min.js',go,function(){ld('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js',go,function(){document.body.insertAdjacentHTML('beforeend','<div style="position:fixed;inset:0;z-index:99;background:#000;color:#fff;padding:20px">three.js not found. Run tools/fetch-three.sh or put three.min.js (r128) in lib/.</div>')})});
+</script></body></html>

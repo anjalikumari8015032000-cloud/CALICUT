@@ -1,0 +1,28 @@
+*{box-sizing:border-box;touch-action:none;user-select:none;-webkit-user-select:none}
+html,body{margin:0;height:100%;overflow:hidden;background:#000;font-family:system-ui,sans-serif;color:#fff}
+canvas#g{position:fixed;inset:0;width:100%;height:100%}
+.h{display:none!important}
+.ov{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;z-index:10;background:radial-gradient(#b3121add,#2a0407ee);text-align:center;padding:10px}
+.ov.t{background:#0009}
+h1{font-size:min(13vw,76px);letter-spacing:.18em;margin:0;text-shadow:0 4px 20px #000}
+h2{margin:0}
+.b{padding:10px 26px;min-width:200px;border:2px solid #fff8;border-radius:10px;background:#0006;color:#fff;font-size:17px;text-align:center}
+.b:active{background:#fff3}
+#hud{position:fixed;inset:0;pointer-events:none;z-index:5}
+#hud *{pointer-events:none}
+#hpw{position:absolute;left:12px;top:10px;width:170px;height:14px;border:2px solid #fff;border-radius:8px;background:#0008;overflow:hidden}
+#hp{height:100%;width:100%;background:linear-gradient(#5f5,#2a2)}
+#obj{position:absolute;left:12px;top:34px;max-width:42vw;font-size:13px;background:#000a;padding:6px 10px;border-left:4px solid #fc3;border-radius:4px}
+#loc{position:absolute;left:12px;top:min(100px,25vh);font-size:12px;opacity:.9;text-shadow:0 1px 3px #000}
+#mm{position:absolute;right:calc(10px + env(safe-area-inset-right,0px));top:10px;width:116px;height:116px;border:2px solid #fff;border-radius:50%;background:#0007}
+#spd{position:absolute;right:140px;top:14px;font-size:20px;font-weight:700;text-shadow:0 1px 4px #000}
+#msg,#hint{position:absolute;left:50%;transform:translateX(-50%);text-align:center;font-size:14px;background:#000b;padding:6px 12px;border-radius:8px}
+#msg{top:16%}#hint{bottom:90px}
+#tc{position:fixed;inset:0;z-index:6;pointer-events:none}
+#jl{position:absolute;left:calc(26px + env(safe-area-inset-left,0px));bottom:26px;width:140px;height:140px;border-radius:50%;background:#fff2;border:2px solid #fff6;pointer-events:auto}
+#jk{position:absolute;left:45px;top:45px;width:50px;height:50px;border-radius:50%;background:#fffa}
+.a{position:absolute;width:56px;height:56px;border-radius:50%;background:#0007;border:2px solid #fffa;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;pointer-events:auto}
+.a:active{background:#e33a}
+.s{display:flex;gap:6px;align-items:center}
+.s input,.s select{width:150px}
+.ml{display:flex;flex-direction:column;gap:6px;max-height:60vh;overflow:auto;touch-action:pan-y}
